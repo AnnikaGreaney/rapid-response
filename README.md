@@ -20,7 +20,7 @@ rake db:setup
 ```
 
 This will create both an AdminUser and a User record if you need them.
-To log in as either, the email and password are `admin@codelation` or `user@codelation.com`,
+To log in as either, the email and password are `annika@agreaney.com` or `annikagreaney@gmail.com`,
 and the password for both is `password123`. The admin interface is available at `/admin`.
 
 ## Running in Development
