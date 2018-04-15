@@ -1,0 +1,29 @@
+// Global variables
+$accent-color:          $black;
+$body-background-color: #eee;
+$primary-color:         #a2233c;
+$border-color:          #eee;
+$max-width:             1180px;
+$mobile-breakpoint:     767px;
+$transition-timing:     cubic-bezier(0.25, 0.8, 0.25, 1);
+$default-ui-color:      $accent-color; // used in the codelation_ui components
+
+// Typography
+$font-family: 'Open Sans', tahoma, arial !default;
+
+// Front Facing Site Colors
+$benefits-background-color: #fafafa;
+
+// Dashboard Colors
+// Cards
+$card-group-body-color: lighten($body-background-color, 2%);
+
+// Tables
+$table-body-color: lighten($body-background-color, 2%);
+$inner-table-body-color: lighten($body-background-color, 2%);
+$inner-table-header-bg: lighten($body-background-color, 1%);
+$inner-table-header-color: #727a99;
+
+// Panel
+$panel-body-color: lighten($body-background-color, 2%);
+$panel-box-shadow: 0 7px 14px 0 rgba(0, 0, 0, 0.1), 0 3px 6px 0 rgba(0, 0, 0, 0.07);

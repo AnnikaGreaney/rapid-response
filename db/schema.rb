@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20180414183947) do
+ActiveRecord::Schema.define(version: 20180415001049) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -53,6 +53,13 @@ ActiveRecord::Schema.define(version: 20180414183947) do
   add_index "admin_users", ["email"], name: "index_admin_users_on_email", unique: true, using: :btree
   add_index "admin_users", ["reset_password_token"], name: "index_admin_users_on_reset_password_token", unique: true, using: :btree
   add_index "admin_users", ["unlock_token"], name: "index_admin_users_on_unlock_token", unique: true, using: :btree
+
+  create_table "contact_locations", force: :cascade do |t|
+    t.integer "contact_id"
+    t.string  "longitude"
+    t.string  "latitude"
+    t.integer "task_id"
+  end
 
   create_table "contacts", force: :cascade do |t|
     t.string  "first_name"
@@ -149,6 +156,24 @@ ActiveRecord::Schema.define(version: 20180414183947) do
     t.text    "information"
   end
 
+  create_table "post_templates", force: :cascade do |t|
+  end
+
+  create_table "posts", force: :cascade do |t|
+  end
+
+  create_table "roles", force: :cascade do |t|
+    t.string "name"
+  end
+
+  create_table "tasks", force: :cascade do |t|
+    t.string  "title"
+    t.string  "status"
+    t.text    "details"
+    t.integer "contact_id"
+    t.string  "priority"
+  end
+
   create_table "users", force: :cascade do |t|
     t.string   "name"
     t.string   "email",                  default: "", null: false
@@ -163,6 +188,7 @@ ActiveRecord::Schema.define(version: 20180414183947) do
     t.inet     "last_sign_in_ip"
     t.datetime "created_at",                          null: false
     t.datetime "updated_at",                          null: false
+    t.integer  "organization_id"
   end
 
   add_index "users", ["email"], name: "index_users_on_email", unique: true, using: :btree

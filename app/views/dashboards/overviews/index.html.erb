@@ -1,0 +1,43 @@
+<!-- Officer Location Map -->
+<h2>Officer Real-time Locations</h2>
+<div>
+  <%= render partial: "dashboards/locations/map" %>
+</div>
+<!-- Officer Location Map End -->
+<!-- Create New Post -->
+<div>
+  <h2>New Posting</h2>
+  <%= form_for :new_post do |f| %>
+    <div>
+      <%= f.text_area :post_content %>
+    </div>
+    <%= f.hidden_field :post, id: :forum_post %>
+    <trix-editor class="post-editor" input="forum_post"></trix-editor>
+    <%= f.submit "Send" %>
+  <% end %>
+</div>
+<!-- Create New Post End -->
+<!-- Officer Availability Listing -->
+<div>
+  <h2>Available Officers</h2>
+  <% @available_users.each do |user| %>
+    <div>
+      <span><%= user.first_name + " " + user.last_name %></span>
+      <span><%= user.role.name %></span>
+      <span><%= user.organization.name %></span>
+    </div>
+  <% end %>
+</div>
+<!-- Officer Availability Listing End -->
+<!-- Tasks Listing -->
+<div>
+  <h2>Current Open Tasks</h2>
+
+</div>
+<!-- Tasks Listing End -->
+<!-- Latest Posts Listing -->
+<div>
+  <h2>Latest Posts</h2>
+  
+</div>
+<!-- Latests Posts Listing End -->
