@@ -1,3 +1,14 @@
 <header>
-  <h1>Rapid Response</h1>
+  <div class="title">
+    <h1>Rapid Response</h1>
+  </div>
+  <ul>
+    <li><%= link_to "Live Map", dashboards_contact_locations_path %></li>
+    <li><%= link_to "Contacts", dashboards_contacts_path %></li>
+    <li><%= link_to "Tasks", dashboards_tasks_path %></li>
+    <li><%# link_to "Discussion", dashboards_discussions_path %></li>
+  </ul>
+  <div class="logout">
+    <%= link_to "Sign Out", destroy_user_session_path %>
+  </div>
 </header>

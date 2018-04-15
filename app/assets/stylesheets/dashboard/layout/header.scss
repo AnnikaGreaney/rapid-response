@@ -1,0 +1,45 @@
+header {
+  background-color: $primary-color;
+  height: 80px;
+  overflow-x: auto;
+  .title {
+    height: 80px;
+    float: left;
+    h1 {
+      margin: 0 20px;
+      color: #fff;
+      text-transform: uppercase;
+      line-height: 140px;
+    }
+  }
+  ul {
+    text-transform: uppercase;
+    width: 400px;
+    display: inline-block;
+    li {
+      display: inline-block;
+      margin: 15px 20px;
+      a {
+        text-decoration: none;
+        color: #fff;
+        &:hover {
+          color: #d9d9d9;
+        }
+      }
+    }
+  }
+  .logout {
+    display: inline-block;
+    text-align: right;
+    float: right;
+    margin: 30px 25px;
+    a {
+      color: #5b0000;
+      text-decoration: none;
+      text-transform: uppercase;
+      &:hover {
+        color: #fff;
+      }
+    }
+  }
+}

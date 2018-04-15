@@ -1,0 +1,125 @@
+$body-background-color: #fafafa;
+$body-color:            #3a3a3a;
+$body-font-family:      sans-serif;
+$body-font-size:        16px;
+$body-line-height:      1.6875;
+
+body {
+  background-color: $body-background-color;
+  font-family: $body-font-family;
+  font-size: $body-font-size;
+  -webkit-font-smoothing: subpixel-antialiased;
+  line-height: $body-line-height;
+  position: relative;
+  text-rendering: optimizelegibility;
+  .column-2 {
+    width: 40%;
+    float: left;
+    padding: 20px
+  }
+  select#post_template_id {
+    border: 1px solid #000;
+    height: 31px;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    -webkit-border-radius: 0px;
+    background-image: url("https://image.flaticon.com/icons/svg/60/60781.svg");
+    background-position: 99% 50%;
+    background-repeat: no-repeat;
+    background-size: 16px;
+  }
+  .top {
+    border-bottom: 1px solid #e2aaaa;
+  }
+  .bottom {
+    background: #fff;
+    overflow: hidden;
+    .column-3 {
+      background: none;
+    }
+  }
+  trix-toolbar {
+    display: inline-block;
+  }
+  input.submit {
+      float: right;
+      border: 1px solid #000;
+      text-transform: uppercase;
+      background: #9e0b0f;
+      line-height: 26px;
+      color: #fff;
+      &:hover {
+        color:#000;
+        background: #eee;
+      }
+    }
+  .trix-button {
+    background: #eee;
+    border: 1px solid #000;
+    text-transform: uppercase;
+    line-height: 26px;
+    &:hover {
+      color: #fff;
+      background: #9e0b0f;
+    }
+
+  }
+
+  trix-editor.post-editor,
+  .trix-button-group--block-tools,
+  .trix-button-group--history-tools {
+    display: none;
+  }
+
+  .map-box {
+    .map {
+      width: 470px;
+      height: 400px;
+    }
+  }
+  h2 {
+    text-align: center;
+    text-transform: uppercase;
+    margin: 0 0 20px 0;
+    font-size: 18px;
+    font-weight: normal;
+  }
+
+  .column-3 {
+    width: 60%;
+    float: left;
+    background: #eee;
+    padding: 20px;
+    #new_post_post_content {
+      width: 730px;
+      height: 400px;
+    }
+  }
+
+  span.role {
+    font-size: 15px;
+    color: #7e7e7e;
+  }
+
+  span.name {
+    font-size: 18px;
+    color: #9e0b0f;
+  }
+
+  span.org {
+    font-size: 16px;
+    font-style: italic;
+    float: right;
+  }
+
+  .clear {
+    clear: both;
+    overflow: hidden;
+  }
+
+  .width-50 {
+    width: 50%;
+    float: left;
+    padding: 0 20px 20px 20px;
+  }
+}

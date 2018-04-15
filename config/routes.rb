@@ -22,6 +22,8 @@ RapidResponse::Application.routes.draw do
       resources :organization_relations
       resources :locations
       resources :contact_locations
+      resources :tasks
+      resources :post_templates
     end
   end
 
